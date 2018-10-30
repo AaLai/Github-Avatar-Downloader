@@ -1,4 +1,5 @@
 // --- Bringing in required files
+require('dotenv').config();
 const request = require('request');
 const secrets = require('./secrets');
 const fs = require('fs');
@@ -31,7 +32,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
     url: "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contributors",
     headers: {
       'User-Agent': 'request',
-      'Authorization': "token " + secrets.GITHUB_TOKEN
+      'Authorization': "token " + process.env.Git_token
     }
   };
 

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/AaLai/Github-Avatar-Downloader#readme",
   "dependencies": {
+    "dotenv": "^6.1.0",
     "request": "^2.88.0"
   }
 }
